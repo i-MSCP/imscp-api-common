@@ -1,0 +1,76 @@
+{
+  "name": "imscp/imscp-api-common",
+  "description": "Common module for i-MSCP API",
+  "type": "metapackage",
+  "license": "LGPL-2.1-only",
+  "keywords": [
+    "imscp",
+    "frontend",
+    "common",
+    "api"
+  ],
+  "homepage": "https://www.i-mscp.net/",
+  "support": {
+    "issues": "https://youtrack.i-mscp.net/",
+    "source": "https://github.com/i-MSCP/imscp/"
+  },
+  "authors": [
+    {
+      "name": "Laurent Declercq",
+      "email": "l.declercq@nuxwin.com",
+      "homepage": "https://www.i-mscp.net/",
+      "role": "developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.1",
+    "zendframework/zend-component-installer": "^2.1.1",
+    "zfcampus/zf-apigility": "^1.4",
+    "zfcampus/zf-apigility-documentation": "^1.2.3",
+    "zfcampus/zf-development-mode": "^3.1"
+  },
+  "require-dev": {
+    "zendframework/zend-developer-tools": "^1.2.1",
+    "zfcampus/zf-apigility-admin": "^1.5.13",
+    "zfcampus/zf-asset-manager": "^1.2",
+    "zfcampus/zf-composer-autoloading": "^2.1",
+    "zfcampus/zf-deploy": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "iMSCP\\Api\\Common\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "iMSCP\\Api\\Common\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit --colors=always",
+    "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+  },
+  "config": {
+    "sort-packages": true,
+    "classmap-authoritative": false,
+    "discard-changes": true,
+    "htaccess-protect": true,
+    "optimize-autoloader": false,
+    "apcu-autoloader": false,
+    "preferred-install": "dist",
+    "process-timeout": 5000
+  }
+}
